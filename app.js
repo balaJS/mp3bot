@@ -4,9 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var appRouter = require('./routes/app');
+// var indexRouter = require('./routes/index');
+// var usersRouter = require('./routes/users');
+// var appRouter = require('./routes/app');
+var bot = require('./routes/bot');
 
 var app = express();
 
@@ -21,14 +22,15 @@ app.use(cookieParser());
 
 app.use('/static', express.static(path.join(__dirname, 'public')));
 // keep adding required node_modules to this array.
-const nm_dependencies = ['msfmultiselect'];
+const nm_dependencies = [];
 nm_dependencies.forEach(dep => {
   app.use(`/static/${dep}`, express.static(path.resolve(`node_modules/${dep}`)));
 });
 
-app.use('/', appRouter);
-app.use('/test', appRouter);
-// app.use('/users', usersRouter);
+app.use('/', bot);
+app.use('/store', bot);
+// app.use('/', appRouter);
+// app.use('/', mp3botRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
