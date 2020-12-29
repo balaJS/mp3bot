@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+.source-wrapper__folder-wrapper__song {
+  padding-bottom: 10px;
+}
+.song {
+  padding: 5px;
+  cursor: pointer;
+  background: darkgray;
+  border-radius: 10px;
+}

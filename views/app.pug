@@ -4,8 +4,8 @@ block content
   h1= title
   input(type='text', name='search-box', placeholder='search here...')
   p()
-  <audio controls>
-    <source src="https://media.hungama.com/c/4/477/0c3/60635871/60635871_128.mp3?4Kt7FguB5XJO2VF_0v2SVQCSVpalB3pUzQpxOLcHeyJSOYV-6LkzWA6_t65NSnmFNwrzuesQxP_JRd08nMYU2jiaLGvPRjD9h3ysi5YH3NNSqqs5JOVVLMoSfZi2u4oOT-i3sQ" type="audio/mp3">
+  <audio class="player js-player" controls>
+    <source src="" type="audio/mp3">
   </audio>
   <hr>
 
@@ -15,14 +15,3 @@ block content
     input(type='submit' value='ADD')
 
   div(class='source-wrapper js-source-wrapper')
-    div(class='source-wrapper__folder-wrapper js-folder-wrapper')
-      h2(class='source-wrapper__folder-wrapper__title') Folder 1
-      div(class='source-wrapper__folder-wrapper__files')
-        div(class='source-wrapper__folder-wrapper__file js-file') File 11
-        div(class='source-wrapper__folder-wrapper__file js-file') File 12
-
-  div(class='source-wrapper__folder-wrapper js-folder-wrapper')
-    h2(class='source-wrapper__folder-wrapper__title') Folder 2
-    div(class='source-wrapper__folder-wrapper__files')
-      div(class='source-wrapper__folder-wrapper__file js-file') File 21
-      div(class='source-wrapper__folder-wrapper__file js-file') File 22
